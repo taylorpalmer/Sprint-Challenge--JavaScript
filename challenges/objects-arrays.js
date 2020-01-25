@@ -261,7 +261,7 @@ function lowerNames(){
   });
 
   for (let i = 0; zooAnimals.length; i++) {
-    lowCaseAnimalNames.push(`${zooAnimals[i].animal_name.toLowerCase}`);
+    lowCaseAnimalNames.push(mappedNames.toLowerCase);
   }
 }
 
@@ -272,7 +272,19 @@ console.log(lowCaseAnimalNames);
 The zoos are concerned about animals with a lower population count. Using filter, create a new array of objects called lowPopulationAnimals which contains only the animals with a population less than 5.
 
 */
-const lowPopulationAnimals = [];
+
+function lowPop(){
+  const lowPopulationAnimals = [];
+
+  const filteredAnimals = zooAnimals.filter((zooAnimals) => {
+    return zooAnimals.population < 5;
+  });
+
+  for (let i = 0; zooAnimals.length; i++) {
+    lowPopulationAnimals.push(filteredAnimals)
+  }
+}
+
 console.log(lowPopulationAnimals);
 
 /* Request 4: .reduce() 

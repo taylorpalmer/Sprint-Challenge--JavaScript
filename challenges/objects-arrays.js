@@ -156,11 +156,11 @@ function gradInfo(graduates) {
 function gotUni(graduates) {
   const unisWithUni = [];
 
-  for (let i = 0; graduates.length; i++) {
-    unisWithUni.push(graduates[i].university);
-  }
+  const filterUni = (arr, query) => {
+    return arr.filter(el => el.indexOf(query) !== -1);
+  };
 
-  const filterUni = graduates.filter(/Uni/);
+  unisWithUni.push(filterUni(graduates, "Uni"));
 }
 
 console.log(unisWithUni);

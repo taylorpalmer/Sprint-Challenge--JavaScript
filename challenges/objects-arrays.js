@@ -54,7 +54,7 @@ console.log(stegosaurus.length);
 console.log(tyrannosaurus.period);
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
-console.log(tyrannosaurus.roar);
+console.log(tyrannosaurus.roar());
 
 // ==== Arrays ====
 
@@ -225,7 +225,7 @@ The zoos want to display both the scientific name and the animal name in front o
 
 */
 
-const contactInfo = zooAnimals.map(
+const contactInfo = zooAnimals.forEach(
   zooAnimal => `${zooAnimal.animal_name} ${zooAnimal.scientific_name}`
 );
 
